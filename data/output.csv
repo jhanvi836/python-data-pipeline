@@ -1,0 +1,5 @@
+id,name,age,salary,join_date,is_active,email
+1,Alice,30,70000.0,2022-01-15,True,alice@example.com
+2,Bob,30,85000.5,2021-06-20,False,bob@example.com
+3,Charlie,42,0.0,2020-11-05,True,charlie@example.com
+4,David,25,50000.0,,False,unknown@example.com

@@ -1,0 +1,31 @@
+pipeline:
+  name: "Customer Data Ingestion Pipeline"
+
+input:
+  source_type: "csv"
+  file_path: "data/sample_input.csv"
+
+cleaning:
+  drop_duplicates: true
+  
+  type_conversions:
+    id: "integer"
+    age: "integer"
+    salary: "float"
+    join_date: "datetime"
+    is_active: "boolean"
+
+  missing_value_strategies:
+    age: "median"
+    salary: "fill_value"
+    email: "fill_value"
+
+  fill_values:
+    salary: 0.0
+
+  fill_string_values:
+    email: "unknown@example.com"
+
+output:
+  file_path: "data/output.csv"
+  format: "csv"
